@@ -1,0 +1,195 @@
+* , html , body{
+    margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+	 position: relative;
+     font-family: 'Roboto',Helvetica, Arial, sans-serif;
+     color: #4e4e4e;
+     line-height: 1.5;
+     font-size: 16px;
+     background-color: #f2f2f2; 	
+}
+
+/*Basic styling*/
+h1,h2,h3,h4,h5,h6{
+	font-family:'Karla',Helvetica, Arial, sans-serif;
+	font-weight:600;
+	margin-bottom:10px;
+}
+h1{
+	font-size:45px;
+	margin-top:0;
+}
+
+h2{
+	font-size:36px;
+}
+
+h3{
+	font-size:20px;
+}
+
+.block{
+  width:85%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Margin */
+.mg-top{
+	margin-top:100px;
+}
+
+/*header */
+header{
+	text-align:center;
+	margin-top:20px;
+}
+
+/*navigation */
+nav{
+	font-family:'Karla',Helvetica, Arial, sans-serif;
+	background-color:#4e4e4e;
+	color:#ffffff;
+	margin-top:10px;
+	padding:10px 0;
+	font-size:14px;
+	width:100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav ul{
+	list-style-type: none;
+    text-align:center;
+}
+
+nav ul li{
+	margin-left:10px;
+    display: inline;
+}
+
+nav li a{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+nav li a:hover{
+	color:#f4b2a8;
+}
+
+nav li a:active{
+    color:#e65540;
+}
+
+/*article */
+article{
+	margin-top:30px;
+	margin-bottom:60px;
+	text-align:center;
+}
+
+article a{
+	color:#4e4e4e;
+	text-decoration:none;
+	font-size:14px;
+	padding-top:50px;
+}
+
+article a:hover{
+	color:#e65540;
+}
+
+/*form or login*/
+
+#login{
+	margin-top:50px;
+	text-align:center;
+}
+
+.form{
+	text-align:center;
+	margin:0 auto;
+	color:#e65540;
+}
+
+input{
+	padding:5px;
+}
+
+/*buttons */
+button{
+	margin-top:10px;
+	padding:10px;
+	font-weight:600;
+}
+
+button:hover{
+	background-color:#ef9385;
+	border-color:#ef9385;
+}
+button:focus,button:active{
+	background-color:#ef9385;
+	border-color:transparent;
+}
+
+/*all prodcuts*/
+#all-products{
+	text-align:center;
+	margin-top:100px;
+}
+
+/*product*/
+#product{
+    margin:50px 0;
+}
+
+.left{
+    float: left;
+    width: 50%;
+    padding: 20px;
+	text-align:center;
+}
+
+.right{
+    float: left;
+    padding: 20px;
+    width: 50%;
+    height:auto; 
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*media queries */
+@media (max-width: 600px) {
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*footer */
+footer{
+	padding:50px 0;
+	margin-top:50px;
+	text-align:center;
+    background-color:#ededed;
+}
+footer a{
+	color:#4e4e4e;
+	text-decoration:none;
+	font-weight:600;
+}
+footer a:hover{
+	color:#e65540;
+}
+

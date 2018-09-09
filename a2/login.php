@@ -5,7 +5,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Nyleford - World Class Clothing Brand</title>
+  <title>Login - Nyleford</title>
   <meta name="description" content="Number 1 Men's Clothing Brand">
   <meta name="author" content="Al Sari Ahmad Mater G">
 
@@ -31,7 +31,7 @@
 <body> 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
+
 <header>
     <img src="../../media/logo.png" width="50" height="50" alt="logo.png"> 
     <h1>Nyleford.</h1>
@@ -44,33 +44,23 @@
      <li><a href="all-products.php">All Products </a></li>
      <li><a href="product.php"> Single Product </a></li>
      <li><a href="login.php"> Login </a> </li>
-     </ul>
+   </ul>
 </nav>
 
-  
-<main>  
-   <section id="header-img">
-	 <img src="../../media/bg.jpg" style="width:100%">
-   </section>
-   
-   <article>
-     <div class="block">
-       <h2>About Nyleford</h2>
-       <p> We are top men clothing brand. We offer quality at mid-market price points, with each one appealing to a distinct market segment.</p><br><br>
-       <img src="../../media/2.jpg" style="width:50%">
+<main>
+  <section id="login">
+     <h3> [ Nyleford Login ]</h3><br>
+       <div class="block">
+         <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login" method="post" class="form" >
+           <label><h5>Email address</h5></label>
+              <input type="email" name="email" value=""><br><br>
+           <label><h5>Password</label></h5>
+              <input type="password" name="password" value=""><br> 
+              <button type="submit" value="Submit">Submit</button>
+         </form>
       </div>
-   </article>
-   
-   <article>
-     <div class="block">
-      <h2>Our Services</h2>
-        <p>Nyleford specialises in smart casual menswear for any occasion. In fact, it is one of the largest menswear specialist retailer in Australia.
-   	     Its garments are designed in-house, taking inspiration from the latest trends around the world.Nyleford prides itself on the quality of its garments, choice of fabrics, and detailed embellishments. It partners with the most experienced, service-oriented manufacturers around the globe to share the rewards of ongoing growth and consistently deliver high standard product at value for money prices.</p><br><br>
-      <img src="../../media/1.jpg" style="width:50%">
-     </div>
-   </article>
+   </section>
 </main>
-
 <!----Footer--->
 
 <footer>
@@ -86,3 +76,4 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+

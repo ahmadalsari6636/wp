@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["qty"].value;
+    if (x <= 0) {
+        text = "Input not valid";
+        document.getElementById("error").innerHTML = text;
+        return false;
+
+    }
+}
+function increaseValue() {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 1 : value;
+  value++;
+  document.getElementById('number').value = value;
+}
+
+function decreaseValue() {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number').value = value;
+}
+</script>
+
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Nyleford - World Class Clothing Brand</title>
+  <title>Product - Nyleford</title>
   <meta name="description" content="Number 1 Men's Clothing Brand">
   <meta name="author" content="Al Sari Ahmad Mater G">
 
@@ -13,6 +39,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
@@ -44,31 +71,38 @@
      <li><a href="all-products.php">All Products </a></li>
      <li><a href="product.php"> Single Product </a></li>
      <li><a href="login.php"> Login </a> </li>
-     </ul>
+   </ul>
 </nav>
 
-  
-<main>  
-   <section id="header-img">
-	 <img src="../../media/bg.jpg" style="width:100%">
+<main>
+   <section id="product">
+	   <div class="left">
+          <img class="img-fluid" src="../../media/3-s.jpg" alt="shirts" style="width:50%">
+        </div>
+        <div class="right">
+            <h2>Blue Shirt</h2>
+		    <p>Blue colored shirt with a combination of black, the threads give you a cool feeling with thick fabric suitable to be wore in summer or winter conditions.</p>
+		  <form name="myForm" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" onsubmit="return validateForm()"  method="post"><br>
+	         <div class="price"><h3>$70.00</h3></div>
+                <input type="hidden" name='id' value="3-s"/>
+	            <div class="options">
+	                 <label for="option"><h4>Size</h4></label>
+		             <select name="option">
+                       <option value="small">Small</option>
+                       <option value="large">Large</option>
+                     </select>
+	             </div><br>
+               <div class="quantity">
+	                <label for="option"><h4>Quantity</h4></label>
+		            <button type="button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
+		            <input type="text" name="qty" id="number" value="1" />
+		            <button type="button" id="increase" onclick="increaseValue()" value="Increase Value">+</button>
+		            <p id="error"></p>
+               </div> <br>   
+				<button type="submit" value="buy">Buy</button>
+          </form>   
+        </div>
    </section>
-   
-   <article>
-     <div class="block">
-       <h2>About Nyleford</h2>
-       <p> We are top men clothing brand. We offer quality at mid-market price points, with each one appealing to a distinct market segment.</p><br><br>
-       <img src="../../media/2.jpg" style="width:50%">
-      </div>
-   </article>
-   
-   <article>
-     <div class="block">
-      <h2>Our Services</h2>
-        <p>Nyleford specialises in smart casual menswear for any occasion. In fact, it is one of the largest menswear specialist retailer in Australia.
-   	     Its garments are designed in-house, taking inspiration from the latest trends around the world.Nyleford prides itself on the quality of its garments, choice of fabrics, and detailed embellishments. It partners with the most experienced, service-oriented manufacturers around the globe to share the rewards of ongoing growth and consistently deliver high standard product at value for money prices.</p><br><br>
-      <img src="../../media/1.jpg" style="width:50%">
-     </div>
-   </article>
 </main>
 
 <!----Footer--->
